@@ -7,6 +7,22 @@
     method="POST"
     action="settings">
 
+    <div>
+        <p class="mb-2">Question</p>
+        <input
+            class="border border-slate-300 rounded-sm bg-slate-100 w-full px-4 py-2"
+            name="question"
+            value="<?= J4kim\Cadeau\Config::question() ?>">
+    </div>
+
+
+    <div>
+        <p class="mb-2">Passphrase</p>
+        <input
+            class="border border-slate-300 rounded-sm bg-slate-100 w-full px-4 py-2"
+            name="passphrase">
+    </div>
+
     <p>
         <button
             class="border border-slate-300 rounded-sm bg-slate-500 text-white hover:bg-slate-600 w-full px-4 py-2"

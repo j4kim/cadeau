@@ -50,9 +50,11 @@ class App
 
         $this->router->post('/settings', function () {
             $this->checkAndRedirect();
-            // Config::store([
-            //     //
-            // ]);
+            $newSettings = ['question' => $_POST['question']];
+            if ($_POST['passphrase']) {
+                $newSettings['passphrase'] = password_hash($_POST['passphrase'], PASSWORD_DEFAULT);
+            }
+            Config::store($newSettings);
             $this->redirect();
         });
 

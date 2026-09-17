@@ -1,4 +1,5 @@
 {
     "passphrase": "$2y$12$XLGJRqsyGWuBBFYjUVKk8.E6L7ARobMKaC1rA.ejB7YhfwdPQyPce",
-    "base": "/"
+    "base": "/",
+    "question": "Ma ville natale"
 }
