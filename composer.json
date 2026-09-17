@@ -1,0 +1,26 @@
+{
+    "name": "j4kim/cadeau",
+    "type": "project",
+    "require": {
+        "bramus/router": "^1.6",
+        "league/plates": "^3.6",
+        "symfony/cache": "^7.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "J4kim\\Cadeau\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Joaquim Perez",
+            "email": "jivkim@gmail.com"
+        }
+    ],
+    "scripts": {
+        "serve": [
+            "Composer\\Config::disableProcessTimeout",
+            "npx concurrently \"php -S localhost:1234 -t public\" \"npm run css\" --names=php,css -c \"#93c5fd,#fdba74\""
+        ]
+    }
+}

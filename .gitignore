@@ -1,0 +1,7 @@
+/vendor/
+/node_modules/
+config.json
+public/output.css
+*.local*
+.vscode
+.DS_Store

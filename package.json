@@ -1,0 +1,19 @@
+{
+  "name": "cadeau",
+  "version": "0.1.0",
+  "scripts": {
+    "css": "npx @tailwindcss/cli -i ./public/input.css -o ./public/output.css --watch",
+    "build": "npx @tailwindcss/cli -i ./public/input.css -o ./public/output.css --minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/j4kim/cadeau.git"
+  },
+  "author": "Joaquim Perez",
+  "license": "ISC",
+  "homepage": "https://github.com/j4kim/cadeau#readme",
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "tailwindcss": "^4.1.1"
+  }
+}

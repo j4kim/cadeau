@@ -1,0 +1,27 @@
+<?php
+
+namespace J4kim\Cadeau;
+
+class Auth
+{
+    public static function attempt(string $passphrase): bool
+    {
+        return password_verify($passphrase, Config::passphrase());
+    }
+
+    public static function login(string $passphrase): bool
+    {
+        $correct = self::attempt($passphrase);
+        return $_SESSION['authenticated'] = $correct;
+    }
+
+    public static function logout(): bool
+    {
+        return session_destroy();
+    }
+
+    public static function check(): bool
+    {
+        return isset($_SESSION['authenticated']) && $_SESSION['authenticated'];
+    }
+}
