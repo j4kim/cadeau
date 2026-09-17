@@ -40,7 +40,7 @@ class App
 
         $this->router->get('/', function () {
             $this->checkAndRedirect();
-            echo $this->templates->render('home');
+            $this->redirect("photo.jpg");
         });
 
         $this->router->get('/settings', function () {
