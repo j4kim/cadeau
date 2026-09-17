@@ -16,7 +16,6 @@
             value="<?= J4kim\Cadeau\Config::question() ?>">
     </div>
 
-
     <div>
         <p class="mb-2">Passphrase</p>
         <input
