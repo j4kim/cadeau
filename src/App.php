@@ -40,7 +40,7 @@ class App
 
         $this->router->get('/', function () {
             $this->checkAndRedirect();
-            $this->redirect("photo.jpg");
+            $this->redirect(Config::photo());
         });
 
         $this->router->get('/settings', function () {
@@ -53,6 +53,14 @@ class App
             $newSettings = ['question' => $_POST['question']];
             if ($_POST['passphrase']) {
                 $newSettings['passphrase'] = password_hash($_POST['passphrase'], PASSWORD_DEFAULT);
+            }
+            if ($_FILES['photo']) {
+                $path = 'uploads/' . basename($_FILES['photo']['name']);
+                $ok = move_uploaded_file($_FILES['photo']['tmp_name'], $path);
+                if (!$ok) {
+                    abort("Impossible de charger l'image");
+                }
+                $newSettings['photo'] = $path;
             }
             Config::store($newSettings);
             $this->redirect();

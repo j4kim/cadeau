@@ -5,9 +5,10 @@
 <form
     class="flex flex-col gap-8"
     method="POST"
-    action="settings">
+    action="settings"
+    enctype="multipart/form-data">
 
-    <div>
+    <div class="mt-8">
         <p class="mb-2">Question</p>
         <input
             class="border border-slate-300 rounded-sm bg-slate-100 w-full px-4 py-2"
@@ -21,6 +22,16 @@
         <input
             class="border border-slate-300 rounded-sm bg-slate-100 w-full px-4 py-2"
             name="passphrase">
+    </div>
+
+    <div>
+        <p class="mb-2">Photo</p>
+        <input
+            type="file"
+            class="border border-slate-300 rounded-sm bg-slate-100 w-full px-4 py-2"
+            id="photo"
+            name="photo"
+            accept="image/*">
     </div>
 
     <p>
