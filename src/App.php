@@ -75,7 +75,7 @@ class App
                 $this->redirect();
                 return;
             }
-            echo $this->templates->render('login', ['error' => '😭 Mauvais mot de passe...']);
+            echo $this->templates->render('login', ['error' => '😭 Mauvaise réponse']);
         });
 
         $this->router->post('/logout', function () {
